@@ -1,6 +1,6 @@
-baseURL = 'https://mendoza-git.github.io/'
+baseURL = 'https://your-username.github.io/lopez-tables/'
 languageCode = 'en-us'
-title = 'Gonzalos Garage'
+title = 'Lopez Tables'
 theme = 'dream'
 
 [params]
