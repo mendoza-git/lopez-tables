@@ -1,0 +1,23 @@
+<div>
+  {{ if site.Params.siteStartYear }}
+  <p>
+    © {{ if eq now.Year site.Params.siteStartYear }}{{ now.Year }}{{ else }}{{ site.Params.siteStartYear }} - {{
+    now.Year }}{{ end }} {{ site.Title }}
+  </p>
+  {{ else }}
+  <p>Gonzalo's Garage © {{ now.Year }}</p>
+  {{ end }}
+
+  {{ if site.Params.footerBottomText }}
+  <p>{{ site.Params.footerBottomText | safeHTML }}</p>
+  {{ else }}
+  <p class="text-sm">(214) 395-8350</p>
+  <p class="text-sm">
+    🇺🇸
+    🇬🇹
+    🇲🇽
+    <span class="text-base-content/60">
+      Hablamos Español</span>
+  </p>
+  {{ end }}
+</div>

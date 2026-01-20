@@ -1,7 +1,39 @@
-baseURL = 'https://your-username.github.io/lopez-tables/'
-languageCode = 'en-us'
-title = 'Lopez Tables'
+baseURL = '/'
+defaultContentLanguage = 'en'
 theme = 'dream'
+enableEmoji = true
+
+[languages]
+  [languages.en]
+    languageCode = 'en-US'
+    languageName = 'English'
+    title = 'Lopez Tables'
+    weight = 1
+    [languages.en.params]
+      motto = 'High-End Tables in Dallas'
+      description = 'Premium high-end tables and luxury furniture in Dallas, Texas.'
+      
+  [languages.es]
+    languageCode = 'es-ES'
+    languageName = 'Español'
+    title = 'Lopez Tables'
+    weight = 2
+    [languages.es.params]
+      motto = 'Mesas de Alta Gama en Dallas'
+      description = 'Mesas de alta gama y muebles de lujo en Dallas, Texas.'
+      
+  [languages.fr]
+    languageCode = 'fr-FR'
+    languageName = 'Français'
+    title = 'Lopez Tables'
+    weight = 3
+    [languages.fr.params]
+      motto = 'Tables Haut de Gamme à Dallas'
+      description = 'Tables haut de gamme et meubles de luxe à Dallas, Texas.'
 
 [params]
 avatar = '/img/gg-logo.png'
+headerTitle = 'Lopez Tables'
+description = 'Premium high-end tables and luxury furniture in Dallas, Texas. Specializing in custom dining tables, coffee tables, console tables, and designer furniture pieces.'
+[params.Advanced]
+customCSS = ['css/custom.css']
