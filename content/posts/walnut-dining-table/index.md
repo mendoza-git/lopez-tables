@@ -11,8 +11,10 @@ tags:
   - Contemporary
 status: Available
 price: 8500
+catalogNumber: LT-2026-003
 dimensions: 96" L x 42" W x 30" H
 material: Solid American Walnut
+colorScheme: Rich Walnut, Matte Black Steel
 author: Lopez Tables
 draft: false
 contact: 2143958350

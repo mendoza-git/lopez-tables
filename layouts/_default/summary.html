@@ -1,0 +1,107 @@
+{{ $isSold := eq .Params.status "Sold" }}
+
+{{ if $isSold }}
+<div class="catalog-card catalog-card--sold">
+{{ else }}
+<a class="catalog-card" href="{{ .RelPermalink }}">
+{{ end }}
+  <!-- Image Section -->
+  <div class="catalog-card__image-wrapper">
+    {{ if .Params.cover }}
+    <figure class="catalog-card__figure">
+      {{ with .Resources.Get .Params.cover }}
+      {{ if eq .MediaType.SubType "svg" }}
+        <img src="{{ .RelPermalink }}" alt="{{ .Title }}" class="catalog-card__image" />
+      {{ else }}
+        {{ $webp := .Resize (printf "%dx%d webp" .Width .Height) }}
+        <picture>
+          <source srcset="{{ $webp.RelPermalink }}" type="image/webp" />
+          <img src="{{ .RelPermalink }}" alt="{{ .Title }}" class="catalog-card__image" />
+        </picture>
+      {{ end }}
+      {{ else }}
+      <img src="{{ .Params.cover }}" alt="{{ .Title }}" class="catalog-card__image" />
+      {{ end }}
+    </figure>
+    {{ else }}
+    <figure class="catalog-card__figure">
+      {{ with resources.Get (printf "images/default%d.jpg" (index (seq 4 | shuffle) 0)) }}
+      {{ $webp := .Resize (printf "%dx%d webp" .Width .Height) }}
+      <picture>
+        <source srcset="{{ $webp.RelPermalink }}" type="image/webp" />
+        <img src="{{ .RelPermalink }}" alt="{{ .Title }}" class="catalog-card__image" />
+      </picture>
+      {{ end }}
+    </figure>
+    {{ end }}
+    
+    {{ if $isSold }}
+    <div class="catalog-card__sold-overlay">
+      <span class="catalog-card__sold-label">SOLD</span>
+    </div>
+    {{ end }}
+  </div>
+
+  <!-- Content Section -->
+  <div class="catalog-card__content">
+    <!-- Header: Title and Catalog Number -->
+    <div class="catalog-card__header">
+      <h2 class="catalog-card__title">{{ .Title }}</h2>
+      {{ if .Params.catalogNumber }}
+      <span class="catalog-card__catalog-number">No. {{ .Params.catalogNumber }}</span>
+      {{ end }}
+    </div>
+
+    <!-- Divider -->
+    <hr class="catalog-card__divider" />
+
+    <!-- Description -->
+    <div class="catalog-card__description">
+      {{ or .Description .Summary }}
+    </div>
+
+    <!-- Specifications -->
+    <div class="catalog-card__specs">
+      {{ if .Params.material }}
+      <div class="catalog-card__spec-item">
+        <span class="catalog-card__spec-label">Material</span>
+        <span class="catalog-card__spec-value">{{ .Params.material }}</span>
+      </div>
+      {{ end }}
+
+      {{ if .Params.dimensions }}
+      <div class="catalog-card__spec-item">
+        <span class="catalog-card__spec-label">Dimensions</span>
+        <span class="catalog-card__spec-value">{{ .Params.dimensions }}</span>
+      </div>
+      {{ end }}
+
+      {{ if .Params.colorScheme }}
+      <div class="catalog-card__spec-item">
+        <span class="catalog-card__spec-label">Color</span>
+        <span class="catalog-card__spec-value">{{ .Params.colorScheme }}</span>
+      </div>
+      {{ end }}
+    </div>
+
+    <!-- Footer: Price and Status -->
+    <div class="catalog-card__footer">
+      {{ if .Params.price }}
+      <div class="catalog-card__price">
+        <span class="catalog-card__price-amount">${{ .Params.price | lang.FormatNumber 0 }}</span>
+        <span class="catalog-card__price-currency">USD</span>
+      </div>
+      {{ end }}
+      
+      {{ if .Params.status }}
+      <div class="catalog-card__status catalog-card__status--{{ lower .Params.status }}">
+        {{ .Params.status }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+{{ if $isSold }}
+</div>
+{{ else }}
+</a>
+{{ end }}

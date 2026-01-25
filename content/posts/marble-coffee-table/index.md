@@ -11,8 +11,10 @@ tags:
   - Modern
 status: Available
 price: 4200
+catalogNumber: LT-2026-002
 dimensions: 48" L x 28" W x 18" H
 material: Carrara Marble
+colorScheme: White Marble, Brushed Brass
 author: Lopez Tables
 draft: false
 contact: 2143958350

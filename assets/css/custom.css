@@ -53,3 +53,323 @@
   letter-spacing: 0.05em;
 }
 
+/* ============================================
+   Catalog Card - Minimalist Elegant Design
+   Inspired by New Yorker, Steinway, Atlantic
+   ============================================ */
+
+.catalog-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #000000;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  color: inherit;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.catalog-card:not(.catalog-card--sold):hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+  border-color: #333333;
+}
+
+.catalog-card--sold {
+  cursor: not-allowed;
+  opacity: 0.85;
+}
+
+/* Image Section */
+.catalog-card__image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: #fafafa;
+  border-bottom: 1px solid #000000;
+}
+
+.catalog-card__figure {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.catalog-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.catalog-card:not(.catalog-card--sold):hover .catalog-card__image {
+  transform: scale(1.02);
+}
+
+/* Sold Overlay */
+.catalog-card__sold-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.catalog-card__sold-label {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 0.5em;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding-left: 0.5em; /* Compensate for letter-spacing */
+}
+
+/* Content Section */
+.catalog-card__content {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  flex: 1;
+  background: #ffffff;
+}
+
+/* Header */
+.catalog-card__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.catalog-card__title {
+  font-family: 'Cormorant', serif;
+  font-size: 1.875rem;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  margin: 0;
+  color: #000000;
+}
+
+.catalog-card__catalog-number {
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: #666666;
+  text-transform: uppercase;
+}
+
+/* Divider */
+.catalog-card__divider {
+  width: 100%;
+  height: 1px;
+  background: #000000;
+  border: none;
+  margin: 0 0 1rem 0;
+}
+
+/* Description */
+.catalog-card__description {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #333333;
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+/* Specifications */
+.catalog-card__specs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.catalog-card__spec-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  font-size: 0.813rem;
+}
+
+.catalog-card__spec-label {
+  font-family: 'Cormorant', serif;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #666666;
+  font-size: 0.688rem;
+}
+
+.catalog-card__spec-value {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  color: #000000;
+  text-align: right;
+}
+
+/* Footer */
+.catalog-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 2px solid #000000;
+}
+
+.catalog-card__price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.catalog-card__price-amount {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.catalog-card__price-currency {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: #666666;
+}
+
+.catalog-card__status {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.688rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid;
+  background: transparent;
+}
+
+.catalog-card__status--available {
+  color: #2d5016;
+  border-color: #2d5016;
+}
+
+.catalog-card__status--sold {
+  color: #8b0000;
+  border-color: #8b0000;
+}
+
+.catalog-card__status--reserved {
+  color: #b8860b;
+  border-color: #b8860b;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .catalog-card {
+    background: #1a1a1a;
+    border-color: #ffffff;
+  }
+
+  .catalog-card:not(.catalog-card--sold):hover {
+    border-color: #cccccc;
+  }
+
+  .catalog-card__image-wrapper {
+    background: #0a0a0a;
+    border-bottom-color: #ffffff;
+  }
+
+  .catalog-card__content {
+    background: #1a1a1a;
+  }
+
+  .catalog-card__title {
+    color: #ffffff;
+  }
+
+  .catalog-card__catalog-number {
+    color: #999999;
+  }
+
+  .catalog-card__divider {
+    background: #ffffff;
+  }
+
+  .catalog-card__description {
+    color: #cccccc;
+  }
+
+  .catalog-card__specs {
+    border-top-color: #333333;
+  }
+
+  .catalog-card__spec-label {
+    color: #999999;
+  }
+
+  .catalog-card__spec-value {
+    color: #ffffff;
+  }
+
+  .catalog-card__footer {
+    border-top-color: #ffffff;
+  }
+
+  .catalog-card__price-amount {
+    color: #ffffff;
+  }
+
+  .catalog-card__price-currency {
+    color: #999999;
+  }
+
+  .catalog-card__status--available {
+    color: #90ee90;
+    border-color: #90ee90;
+  }
+
+  .catalog-card__status--sold {
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+  }
+
+  .catalog-card__status--reserved {
+    color: #ffd700;
+    border-color: #ffd700;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .catalog-card__content {
+    padding: 1.25rem;
+  }
+
+  .catalog-card__title {
+    font-size: 1.125rem;
+  }
+
+  .catalog-card__price-amount {
+    font-size: 1.25rem;
+  }
+
+  .catalog-card__sold-label {
+    font-size: 2rem;
+  }
+}
+

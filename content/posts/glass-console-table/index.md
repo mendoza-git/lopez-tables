@@ -11,12 +11,15 @@ tags:
   - Designer
 status: Available
 price: 3200
+catalogNumber: LT-2026-001
 dimensions: 60" L x 16" W x 32" H
 material: Tempered Glass & Chrome
+colorScheme: Clear Glass, Polished Chrome
 author: Lopez Tables
 draft: false
 contact: 2143958350
 contactString: (214) 395-8350
+cover: gg-logo.jpg
 ---
 
 Sleek contemporary console table featuring tempered glass and polished chrome. Perfect for modern entryways and hallways.
