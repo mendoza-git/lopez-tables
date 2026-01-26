@@ -5,18 +5,15 @@
     now.Year }}{{ end }} {{ site.Title }}
   </p>
   {{ else }}
-  <p>L&M © {{ now.Year }}</p>
+  <p>L&M Group, Inc. © {{ now.Year }}</p>
   {{ end }}
 
   {{ if site.Params.footerBottomText }}
   <p>{{ site.Params.footerBottomText | safeHTML }}</p>
   {{ else }}
-  <p class="text-sm">(214) 395-8350</p>
   <p class="text-sm">
-    🇺🇸
-    🇬🇹
     <span class="text-base-content/60">
-      Hablamos Español</span>
+      Designed & Crafted in Texas</span>
   </p>
   {{ end }}
 </div>

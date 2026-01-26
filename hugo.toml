@@ -3,6 +3,11 @@ defaultContentLanguage = 'en'
 theme = 'dream'
 enableEmoji = true
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [languages]
   [languages.en]
     languageCode = 'en-US'

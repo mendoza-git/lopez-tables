@@ -1,0 +1,132 @@
+{{ define "title" }}{{ .Title }}{{ end }}
+
+{{ define "main" }}
+<div class="product-detail-container">
+  <!-- Hero Section -->
+  <section class="product-hero">
+    <div class="product-hero__content">
+      <div class="product-hero__meta">
+        {{ if .Params.catalogNumber }}
+        <span class="product-hero__catalog">No. {{ .Params.catalogNumber }}</span>
+        {{ end }}
+        {{ if .Params.status }}
+        <span class="product-hero__status product-hero__status--{{ lower .Params.status }}">{{ .Params.status }}</span>
+        {{ end }}
+      </div>
+      
+      <h1 class="product-hero__title">{{ .Title }}</h1>
+      
+      {{ if or .Description .Summary }}
+      <p class="product-hero__description">{{ or .Description .Summary }}</p>
+      {{ end }}
+
+      {{ if .Params.price }}
+      <div class="product-hero__price">
+        <span class="product-hero__price-amount">${{ .Params.price | lang.FormatNumber 0 }}</span>
+        <span class="product-hero__price-currency">USD</span>
+      </div>
+      {{ end }}
+    </div>
+
+    {{ if .Params.cover }}
+    <div class="product-hero__image">
+      {{ with .Resources.Get .Params.cover }}
+        {{ if eq .MediaType.SubType "svg" }}
+          <img src="{{ .RelPermalink }}" alt="{{ $.Title }}" />
+        {{ else }}
+          {{ $large := .Resize "1200x webp" }}
+          <picture>
+            <source srcset="{{ $large.RelPermalink }}" type="image/webp" />
+            <img src="{{ .RelPermalink }}" alt="{{ $.Title }}" />
+          </picture>
+        {{ end }}
+      {{ else }}
+        <img src="{{ .Params.cover }}" alt="{{ .Title }}" />
+      {{ end }}
+    </div>
+    {{ end }}
+  </section>
+
+  <!-- Specifications Section -->
+  <section class="product-specifications">
+    <h2 class="product-specifications__title">Specifications & Details</h2>
+    
+    <div class="product-specifications__grid">
+      {{ if .Params.dimensions }}
+      <div class="product-spec">
+        <h3 class="product-spec__label">Dimensions</h3>
+        <p class="product-spec__value">{{ .Params.dimensions }}</p>
+      </div>
+      {{ end }}
+
+      {{ if .Params.material }}
+      <div class="product-spec">
+        <h3 class="product-spec__label">Material</h3>
+        <p class="product-spec__value">{{ .Params.material }}</p>
+      </div>
+      {{ end }}
+
+      {{ if .Params.colorScheme }}
+      <div class="product-spec">
+        <h3 class="product-spec__label">Color Scheme</h3>
+        <p class="product-spec__value">{{ .Params.colorScheme }}</p>
+      </div>
+      {{ end }}
+
+      {{ if .Params.weight }}
+      <div class="product-spec">
+        <h3 class="product-spec__label">Weight</h3>
+        <p class="product-spec__value">{{ .Params.weight }}</p>
+      </div>
+      {{ end }}
+
+      {{ if .Params.finish }}
+      <div class="product-spec">
+        <h3 class="product-spec__label">Finish</h3>
+        <p class="product-spec__value">{{ .Params.finish }}</p>
+      </div>
+      {{ end }}
+
+      {{ if .Params.seating }}
+      <div class="product-spec">
+        <h3 class="product-spec__label">Seating Capacity</h3>
+        <p class="product-spec__value">{{ .Params.seating }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+
+  <!-- Detailed Description Section -->
+  {{ if .Content }}
+  <section class="product-description">
+    <div class="product-description__content">
+      {{ .Content }}
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Contact Section -->
+  <section class="product-contact">
+    <h2 class="product-contact__title">Request More Information</h2>
+    <p class="product-contact__text">
+      Interested in this piece? Contact us to learn more, schedule a viewing, or discuss customization options.
+    </p>
+    <div class="product-contact__details">
+      {{ if .Params.contactString }}
+      <a href="tel:{{ .Params.contact }}" class="product-contact__phone">
+        {{ .Params.contactString }}
+      </a>
+      {{ end }}
+      <a href="/about#contact" class="product-contact__button">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- Back to Catalog -->
+  <div class="product-back">
+    <a href="/" class="product-back__link">
+      <span class="product-back__arrow">←</span>
+      <span>Back to Catalog</span>
+    </a>
+  </div>
+</div>
+{{ end }}

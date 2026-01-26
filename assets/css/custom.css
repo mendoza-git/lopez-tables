@@ -49,8 +49,18 @@
 
 /* High-end luxury styling */
 .text-base-content\/60 {
+  font-family: 'Cormorant', serif !important;
+  font-weight: 400;
+  font-size: 16px;
   font-style: italic;
   letter-spacing: 0.05em;
+}
+
+#motto {
+  color: #ffffff !important;
+  font-weight: 300;
+  font-size: 16px;
+  font-style: normal;
 }
 
 /* ============================================
@@ -62,8 +72,7 @@
   display: flex;
   flex-direction: column;
   background: #ffffff;
-  border: 1px solid #000000;
-  position: relative;
+  border: 1px solid #000000;  border-radius: 0;  position: relative;
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
@@ -179,8 +188,9 @@
 
 /* Description */
 .catalog-card__description {
-  font-family: 'Georgia', 'Times New Roman', serif;
-  font-size: 0.875rem;
+  font-family: 'Cormorant', serif;
+  font-size: 1rem;
+  font-weight: 400;
   line-height: 1.6;
   color: #333333;
   margin-bottom: 1.25rem;
@@ -212,7 +222,7 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #666666;
-  font-size: 0.688rem;
+  font-size: 1rem;
 }
 
 .catalog-card__spec-value {
@@ -373,3 +383,534 @@
   }
 }
 
+/* ============================================
+   Product Detail Page - Steinway-inspired
+   ============================================ */
+
+.product-detail-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Hero Section */
+.product-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 5rem;
+  padding: 3rem 0;
+  border-bottom: 2px solid #000000;
+}
+
+.product-hero__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 2rem;
+}
+
+.product-hero__meta {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.product-hero__catalog {
+  font-family: 'Courier New', monospace;
+  font-size: 0.813rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #666666;
+}
+
+.product-hero__status {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.688rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.375rem 0.875rem;
+  border: 1px solid;
+}
+
+.product-hero__status--available {
+  color: #2d5016;
+  border-color: #2d5016;
+}
+
+.product-hero__status--sold {
+  color: #8b0000;
+  border-color: #8b0000;
+}
+
+.product-hero__title {
+  font-family: 'Cormorant', serif;
+  font-size: 3.5rem;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  margin: 0 0 1.5rem 0;
+  color: #000000;
+}
+
+.product-hero__description {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #333333;
+  margin-bottom: 2rem;
+}
+
+.product-hero__price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.product-hero__price-amount {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.product-hero__price-currency {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: #666666;
+}
+
+.product-hero__image {
+  position: relative;
+  overflow: hidden;
+  background: #fafafa;
+  border: 1px solid #000000;
+}
+
+.product-hero__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Specifications Section */
+.product-specifications {
+  margin-bottom: 5rem;
+  padding: 3rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.product-specifications__title {
+  font-family: 'Cormorant', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 3rem;
+  color: #000000;
+  text-align: center;
+}
+
+.product-specifications__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+.product-spec {
+  border-top: 2px solid #000000;
+  padding-top: 1rem;
+}
+
+.product-spec__label {
+  font-family: 'Cormorant', serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #666666;
+  margin: 0 0 0.75rem 0;
+}
+
+.product-spec__value {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #000000;
+  margin: 0;
+}
+
+/* Description Section */
+.product-description {
+  margin-bottom: 5rem;
+  padding: 0 4rem;
+}
+
+.product-description__content {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333333;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.product-description__content h2 {
+  font-family: 'Cormorant', serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  font-style: italic;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #000000;
+}
+
+.product-description__content h3 {
+  font-family: 'Cormorant', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-style: italic;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.product-description__content ul,
+.product-description__content ol {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.product-description__content li {
+  margin-bottom: 0.5rem;
+}
+
+.product-description__content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+.product-description__content th,
+.product-description__content td {
+  border: 1px solid #e0e0e0;
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+.product-description__content th {
+  font-family: 'Cormorant', serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 1.4rem;
+  background: #fafafa;
+}
+
+/* Contact Section */
+.product-contact {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #fafafa;
+  border: 1px solid #000000;
+  margin-bottom: 3rem;
+}
+
+.product-contact__title {
+  font-family: 'Cormorant', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.product-contact__text {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #333333;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.product-contact__details {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.product-contact__phone {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.product-contact__phone:hover {
+  color: #666666;
+}
+
+.product-contact__button {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 1rem 2.5rem;
+  background: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  border: 2px solid #000000;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.product-contact__button:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* Back to Catalog */
+.product-back {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.product-back__link {
+  font-family: 'Cormorant', serif !important;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #666666;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.product-back__link:hover {
+  color: #000000;
+}
+
+.product-back__arrow {
+  font-size: 1.25rem;
+  font-family: 'Cormorant', serif !important;
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .product-hero {
+    border-bottom-color: #ffffff;
+  }
+
+  .product-hero__title,
+  .product-hero__price-amount,
+  .product-spec__value,
+  .product-specifications__title,
+  .product-description__content h2,
+  .product-description__content h3,
+  .product-contact__title {
+    color: #ffffff;
+  }
+
+  .product-hero__description,
+  .product-description__content,
+  .product-contact__text {
+    color: #cccccc;
+  }
+
+  .product-hero__catalog {
+    color: #cccccc;
+  }
+
+  .product-hero__price-currency,
+  .product-spec__label,
+  .product-back__link {
+    color: #999999;
+  }
+
+  .product-hero__image,
+  .product-contact {
+    background: #1a1a1a;
+    border-color: #ffffff;
+  }
+
+  .product-specifications {
+    border-bottom-color: #333333;
+  }
+
+  .product-spec {
+    border-top-color: #ffffff;
+  }
+
+  .product-description__content th {
+    background: #262626;
+  }
+
+  .product-description__content th,
+  .product-description__content td {
+    border-color: #333333;
+  }
+
+  .product-contact__button {
+    background: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+  }
+
+  .product-contact__button:hover {
+    background: transparent;
+    color: #ffffff;
+  }
+
+  .product-contact__phone {
+    color: #e0e0e0;
+  }
+
+  .product-contact__phone:hover {
+    color: #ffffff;
+  }
+
+  .product-hero__status--available {
+    color: #90ee90;
+    border-color: #90ee90;
+  }
+
+  .product-back__link:hover {
+    color: #ffffff;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .product-hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .product-hero__content {
+    padding-right: 0;
+  }
+
+  .product-hero__title {
+    font-size: 2.5rem;
+  }
+
+  .product-specifications__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-description {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-detail-container {
+    padding: 1rem;
+  }
+
+  .product-hero {
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+  }
+
+  .product-hero__title {
+    font-size: 2rem;
+  }
+
+  .product-hero__price-amount {
+    font-size: 2rem;
+  }
+
+  .product-specifications {
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+  }
+
+  .product-specifications__title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .product-description {
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+  }
+
+  .product-contact {
+    padding: 2rem 1rem;
+  }
+
+  .product-contact__title {
+    font-size: 1.5rem;
+  }
+
+  .product-contact__details {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* Footer Mobile Layout */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column-reverse !important;
+    align-items: center !important;
+    gap: 2rem !important;
+    text-align: center !important;
+  }
+}
+
+/* About Page Card Styling */
+.dream-grid-about .dream-column article {
+  border-radius: 0 !important;
+}
+
+.dream-grid-about .dream-column .card-title {
+  font-family: 'Cormorant', serif;
+  font-size: 1.875rem;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+.dream-grid-about .dream-column .prose {
+  font-family: 'Cormorant', serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Make last card (Contact Us) full width on desktop */
+.dream-grid-about .dream-column:last-child {
+  width: 100% !important;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .dream-grid-about .dream-column:last-child article {
+    padding: 3rem;
+  }
+}
