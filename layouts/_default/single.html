@@ -1,6 +1,7 @@
 {{ define "title" }}{{ .Title }}{{ end }}
 
 {{ define "main" }}
+{{ if eq .Section "posts" }}
 <div class="product-detail-container">
   <!-- Hero Section -->
   <section class="product-hero">
@@ -129,4 +130,10 @@
     </a>
   </div>
 </div>
+{{ else }}
+<!-- Simple content page layout for non-product pages -->
+<div style="max-width: 1200px; margin: 0 auto; padding: 2rem 1rem;">
+  {{ .Content }}
+</div>
+{{ end }}
 {{ end }}
