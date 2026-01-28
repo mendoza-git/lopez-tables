@@ -1,5 +1,5 @@
 ---
-title: About Lopez Tables
+title: About Us
 date: 2026-01-25T12:00:00-06:00
 ---
 
