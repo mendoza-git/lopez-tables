@@ -55,7 +55,7 @@ date: 2026-01-26T12:00:00-06:00
         Lopez Tables Guest Services are available Monday to Saturday, 10am to 7pm CST
       </p>
       <p class="info-text">
-        Please note, we will be closed or have modified hours in observance of major US holidays.
+        Please note, we will be closed or have modified hours in observance of the following US holidays: New Year’s Eve, New Year's Day, Martin Luther King Jr. Day, Presidents’ Day, Memorial Day, Juneteenth, Independence Day, Labor Day, Columbus Day, Thanksgiving Eve, Thanksgiving Day, Christmas Eve and Christmas Day
       </p>
       <a href="tel:+1234567890" class="contact-phone">
         <span class="phone-icon">📞</span> Phone +1 234 567 8900
