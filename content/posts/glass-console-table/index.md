@@ -11,7 +11,7 @@ tags:
   - Designer
 status: Available
 price: 3200
-catalogNumber: LT-2026-001
+catalogNumber: LM-2026-004
 dimensions: 60" L x 16" W x 32" H
 material: Tempered Glass & Chrome
 colorScheme: Clear Glass, Polished Chrome

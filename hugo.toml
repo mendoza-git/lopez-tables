@@ -15,11 +15,13 @@ enableEmoji = true
     title = ''
     weight = 1
     [languages.en.params]
-      motto = 'High-End Tables in Dallas'
+      motto = ''
       description = 'Premium high-end tables and luxury furniture in Dallas, Texas.'
 
 [params]
   avatar = '/img/l-m-logo@5x.png'
+  logoLight = '/img/logo-white.png'
+  logoDark = '/img/logo-dark.png'
   headerTitle = ''
   description = 'Premium high-end tables and luxury furniture in Dallas, Texas. Specializing in custom dining tables, coffee tables, console tables, and designer furniture pieces.'
   

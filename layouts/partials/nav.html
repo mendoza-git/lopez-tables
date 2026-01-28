@@ -1,66 +1,44 @@
-{{ if site.Params.stickyNav }}
-<nav x-data="{ isSticky: false }"
-  x-init="window.addEventListener('scroll', () => { isSticky = window.scrollY > 30 })"
-  class="sticky top-0 z-30 mt-4 lg:mt-8 py-4"
-  :class="{ 'bg-base-100 shadow-lg dark:border-b dark:border-base-content/30': isSticky }">
-{{ else }}
-<nav class="mt-4 lg:mt-8 py-4">
-{{ end }}
-  {{ if site.Params.zenMode }}
-  <div class="container flex justify-center max-w-[65ch] mx-auto px-4 md:px-0">
-  {{ else }}
-  <div class="container flex justify-center px-4">
-  {{ end }}
-    <section class="flex flex-col items-center gap-2">
-      <a href="{{ site.BaseURL }}">
-      {{/*  <div class="avatar cursor-pointer" @click="flip = !flip" title="{{ T "flip" }}">  */}}
-        <div class="avatar cursor-pointer" title="{{ site.Params.headerTitle }}">
-        <div class="h-10 rounded-full">
-          <img src="{{ site.Params.avatar | relURL }}" alt="{{ site.Params.headerTitle }}" />
+<nav id="main-nav" class="main-nav">
+  <div class="nav-container">
+    <section class="nav-brand">
+      <a href="{{ site.BaseURL }}" class="nav-logo-link">
+        <div class="nav-logo">
+          <img src="{{ site.Params.logoLight | relURL }}" alt="{{ site.Params.headerTitle | default site.Title }}" class="nav-logo-light" />
+          <img src="{{ site.Params.logoDark | relURL }}" alt="{{ site.Params.headerTitle | default site.Title }}" class="nav-logo-dark" />
         </div>
-      </div>
       </a>
-
       {{ if or site.Params.headerTitle site.Params.motto }}
-      <div class="text-center">
+      <div class="nav-text">
         {{ if site.Params.headerTitle }}
-        <a href="{{ site.BaseURL }}" class="text-lg font-semibold cursor-pointer">
+        <a href="{{ site.BaseURL }}" class="nav-title">
           {{ site.Params.headerTitle }}
         </a>
         {{ end }}
         {{ if site.Params.motto }}
-        <div id="motto" class="text-base-content/60 text-sm">{{ site.Params.motto }}</div>
+        <div class="nav-motto">{{ site.Params.motto }}</div>
         {{ end }}
       </div>
       {{ end }}
     </section>
 
-    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
-      {{/*  {{ $navItems := slice "search" "rss" "posts" "categories" "tags" }}  */}}
+    <section class="nav-items">
       {{ $navItems := slice "search" "rss" }}
-
       {{ if site.Params.reorderNavItems }}
         {{ $navItems = site.Params.reorderNavItems }}
       {{ end }}
-
       {{ if not site.Params.collapseNavItems }}
-
       {{ range $navItems }}
       {{ partial "renderNavItem.html" . }}
       {{ end }}
-
       {{ with site.Params.navItems }}
       {{ partial "navCustomItems.html" (dict "navItems" $navItems "mobile" false) }}
       {{ end }}
-
       {{ else }}
-
       {{ $collapseNavItems := site.Params.collapseNavItems }}
       {{ $items := complement $collapseNavItems $navItems }}
       {{ range $items }}
       {{ partial "renderNavItem.html" . }}
       {{ end }}
-
       <div class="dropdown dropdown-end dropdown-hover">
         <div tabindex="0" role="button" class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" aria-label="Select an option">
           <ion-icon class="group-hover:text-primary-content text-xl" name="menu"></ion-icon>
@@ -69,7 +47,6 @@
           {{ range $collapseNavItems }}
           {{ partial "renderMobileNavItem.html" . }}
           {{ end }}
-
           {{ with site.Params.navItems }}
           {{ partial "navCustomItems.html" (dict "navItems" $navItems "mobile" true) }}
           {{ end }}
@@ -79,3 +56,27 @@
     </section>
   </div>
 </nav>
+
+<script>
+  // Scroll detection for nav background change
+  (function() {
+    const nav = document.getElementById('main-nav');
+    const logo = document.getElementById('nav-logo-img');
+    let lastScroll = 0;
+    
+    function handleScroll() {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (currentScroll > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+      
+      lastScroll = currentScroll;
+    }
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Check initial state
+  })();
+</script>
