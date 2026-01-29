@@ -1,0 +1,15 @@
+{{ if site.Params.zenMode }}
+<footer class="custom-footer max-w-[65ch] mx-auto px-4 md:px-0 py-12">
+{{ else }}
+<footer class="custom-footer px-4 py-12">
+{{ end }}
+  <div class="footer-left">
+    {{ partial "footerLeft.html" . }}
+  </div>
+  <div class="footer-center">
+    {{ partial "footerCenter.html" . }}
+  </div>
+  <div class="footer-right">
+    {{ partial "footerRight.html" . }}
+  </div>
+</footer>
