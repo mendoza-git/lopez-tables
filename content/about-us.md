@@ -10,7 +10,7 @@ date: 2026-01-25T12:00:00-06:00
   <div class="luxury-separator"></div>
   
   <p class="luxury-text">
-    Lopez Tables represents the pinnacle of American furniture craftsmanship. Based in Dallas, Texas, we specialize in creating exceptional high-end tables and bespoke furniture pieces that transcend mere functionality to become lasting works of art.
+    Lopez & Mendoza represents the pinnacle of American furniture craftsmanship. Based in Dallas, Texas, we specialize in creating exceptional high-end tables and bespoke furniture pieces that transcend mere functionality to become lasting works of art.
   </p>
   
   <p class="luxury-text">
@@ -27,7 +27,7 @@ date: 2026-01-25T12:00:00-06:00
   <div class="luxury-separator"></div>
   
   <p class="luxury-text">
-    At Lopez Tables, we are committed to providing an exceptional purchasing experience that reflects the quality and craftsmanship of our furniture.
+    At Lopez & Mendoza, we are committed to providing an exceptional purchasing experience that reflects the quality and craftsmanship of our furniture.
   </p>
   
   <h3 class="luxury-subtitle">Product Information</h3>

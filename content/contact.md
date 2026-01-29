@@ -7,7 +7,7 @@ date: 2026-01-26T12:00:00-06:00
 <section class="contact-hero">
   <h1 class="contact-main-title">Contact Us</h1>
   <p class="contact-subtitle">
-    The Lopez Tables team is here to help with any of your queries and questions. You will find multiple ways to contact us below.
+    The Lopez & Mendoza team is here to help with any of your queries and questions. Reach out via form, text, or email below.
   </p>
 </section>
 <div class="contact-container">
@@ -42,7 +42,7 @@ date: 2026-01-26T12:00:00-06:00
       <div class="form-checkbox">
         <input type="checkbox" id="privacy" name="privacy" required class="checkbox-input" />
         <label for="privacy" class="checkbox-label">
-          I acknowledge that my data will be processed by Lopez Tables in accordance with the provisions of the Privacy Policy.
+          I acknowledge that my data will be processed by Lopez & Mendoza in accordance with the provisions of the Privacy Policy.
         </label>
       </div>
       <button type="submit" class="form-button">Submit</button>
@@ -52,13 +52,13 @@ date: 2026-01-26T12:00:00-06:00
     <h2 class="section-title">Other Contact</h2>
     <div class="contact-info">
       <p class="info-text">
-        Lopez Tables Guest Services are available Monday to Saturday, 10am to 7pm CST
+        Lopez & Mendoza Guest Services respond to text messages Monday to Saturday, 10am to 7pm CST
       </p>
       <p class="info-text">
-        Please note, we will be closed or have modified hours in observance of the following US holidays: New Year’s Eve, New Year's Day, Martin Luther King Jr. Day, Presidents’ Day, Memorial Day, Juneteenth, Independence Day, Labor Day, Columbus Day, Thanksgiving Eve, Thanksgiving Day, Christmas Eve and Christmas Day
+        Please note, response times may be longer during US holidays: New Year's Eve, New Year's Day, Martin Luther King Jr. Day, Presidents' Day, Memorial Day, Juneteenth, Independence Day, Labor Day, Columbus Day, Thanksgiving Eve, Thanksgiving Day, Christmas Eve and Christmas Day
       </p>
-      <a href="tel:+1234567890" class="contact-phone">
-        <span class="phone-icon">📞</span> Phone +1 234 567 8900
+      <a href="tel:+12143958350" class="contact-phone">
+        <span class="phone-icon">💬</span> Text (214) 395-8350
       </a>
     </div>
   </section>

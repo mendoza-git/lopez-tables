@@ -10,7 +10,7 @@ date: 2025-02-25T19:51:17-06:00
 <div class="luxury-separator"></div>
 
 <p class="luxury-text">
-At Lopez Tables, we take pride in delivering your fine furniture with the same care and attention we put into crafting each piece.
+At Lopez & Mendoza, we take pride in delivering your fine furniture with the same care and attention we put into crafting each piece.
 </p>
 
 <h3 class="luxury-subtitle">Order Confirmation</h3>

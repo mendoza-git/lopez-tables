@@ -17,7 +17,7 @@ Lopez Tables specializes in premium furniture pieces that combine craftsmanship,
 ## Contact
 
 **Location:** Dallas, Texas  
-**Email:** info@lopeztables.com  
+**Email:** info@lopezmendoza.com  
 **Phone:** (214) 395-8350
 
 **Hours:**
@@ -45,4 +45,4 @@ The site can be deployed to GitHub Pages, Netlify, Vercel, or any static hosting
 
 ## License
 
-© 2026 Lopez Tables. All rights reserved.
+© 2026 Lopez & Mendoza. All rights reserved.

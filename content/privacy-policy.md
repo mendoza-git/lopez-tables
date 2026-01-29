@@ -7,7 +7,7 @@ date: 2026-01-27T12:00:00-06:00
 <section class="privacy-hero">
   <h1 class="privacy-title">Privacy Policy</h1>
   <p class="privacy-intro">
-    Lopez Tables is committed to protecting your privacy and personal information. We invite you to carefully read this Privacy Policy as it contains important information about how we collect, use, and protect your personal data.
+    Lopez & Mendoza is committed to protecting your privacy and personal information. We invite you to carefully read this Privacy Policy as it contains important information about how we collect, use, and protect your personal data.
   </p>
   <p class="privacy-date">
     Last Updated: January 27, 2026
@@ -35,10 +35,10 @@ date: 2026-01-27T12:00:00-06:00
     The data controller responsible for your personal information is:
   </p>
   <p class="section-text">
-    <strong>Lopez Tables</strong><br>
+    <strong>Lopez & Mendoza</strong><br>
     [Your Business Address]<br>
-    Email: privacy@lopeztables.com<br>
-    Phone: [Your Phone Number]
+    Email: privacy@lopezmendoza.com<br>
+    Phone: (214) 395-8350
   </p>
 </section>
 <section id="information-collected" class="privacy-section">
@@ -190,10 +190,10 @@ date: 2026-01-27T12:00:00-06:00
   </p>
   <div class="contact-info">
     <p class="section-text">
-      <strong>Lopez Tables</strong><br>
+      <strong>Lopez & Mendoza</strong><br>
       [Your Business Address]<br>
-      Email: <a href="mailto:privacy@lopeztables.com">privacy@lopeztables.com</a><br>
-      Phone: <a href="tel:+1234567890">+1 234 567 8900</a>
+      Email: <a href="mailto:privacy@lopezmendoza.com">privacy@lopezmendoza.com</a><br>
+      Phone: <a href="tel:+12143958350">(214) 395-8350</a>
     </p>
   </div>
   <p class="section-text">
